@@ -1,11 +1,11 @@
 {
   /* <div class="table-content">
-
-<section>Cabecera 1</section>
-<section>Cabecera 2</section>
-<section>Cabecera 3</section>
-
-</div> */
+  
+  <section>Cabecera 1</section>
+  <section>Cabecera 2</section>
+  <section>Cabecera 3</section>
+  
+  </div> */
 }
 const tableData = [
   { content: ["País", "Capital", "Idioma"] },
@@ -53,21 +53,20 @@ function addMoreContent() {
 
   // Escuchar el evento click
   button.addEventListener("click", function () {
-    const div = document.getElementById("inputs").children;
-
+    const container_input_text = document.getElementById("inputs").children;
     const newArrayContent = [];
     const newTableData = [];
     // Recogemos el valor de cada input
-    for (let index = 0; index < div.length; index++) {
+    for (let index = 0; index < container_input_text.length; index++) {
       // Verificamos que todos los valores estén llenos
-      if (div[index].value === "") {
+      if (container_input_text[index].value === "") {
         alert("Llenar todos los campos");
         return;
       }
 
       /// Agregamos el contenido al arreglo
-      newArrayContent.push(div[index].value);
-      div[index].value = "";
+      newArrayContent.push(container_input_text[index].value);
+      container_input_text[index].value = "";
     }
     newTableData.push({
       content: newArrayContent,
@@ -104,7 +103,6 @@ function addMoreContent() {
     }
 
     //   console.log(container_table);
-    console.log(newTableData);
   });
 }
 addMoreContent();

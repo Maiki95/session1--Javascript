@@ -1,0 +1,26 @@
+// tarea
+Principio : No repitas procesos
+
+1.- Con un objeto que tenga la siguiente forma llenar el dom
+
+        const data = {
+          pais: "Nombre del país",
+          capital: "Capital",
+          pais: "Idioma",
+      }
+
+2.- Hay código repetido en el método fillTable() y addMoreContent()
+optimizarlo lo máximo posible. Por ejemplo :
+
+const container_table = document.getElementsByClassName("table-container")[0];
+
+el valor "container_table" se repite en ambos métodos. Podrían hacer una nueva función que me retorne el valor
+de "container_table" y lo llaman en fillTable() y addMoreContent()
+
+3.- Contenedor de botones: En "Imagen reto.PNG" está la imagen referencial del reto
+que consiste en crear un contenedor con html y asignarle una clase o id.
+Luego con javascript lo llenan todo lo que ven en la imagen.
+Una vez que hacen eso crean un evento click que cada vez que den clic en el botón con valor 55 los valores de color blanco deben girar en sentido horario y los rojos en sentido antihorario.
+cada boton debe tener un id único que debe ser "btn" seguido de los valores iniciales de cada número (btn11,btn22,btn33...btn99)
+
+Ojo: Cuando cambien los valores a los cuadros, no modificar los ids
